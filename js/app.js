@@ -37,7 +37,7 @@
                     <h2 class="section-title">What We Do</h2>
                     <div class="services-grid">
                         <div class="service-card">
-                            <div class="service-icon">🍲</div>
+                            <img src="images/meal.webp" alt="Daily Meals" style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%; margin-bottom: 1rem;">
                             <h3>Daily Meals</h3>
                             <p>Providing hundreds of nutritious meals daily to community members in need.</p>
                         </div>
