@@ -62,6 +62,9 @@
             <div class="page">
                 <section class="section">
                     <div class="container">
+                        <div style="text-align: center; margin-bottom: 2rem;">
+                            <img src="images/logo.webp" alt="Awomi Umthombho" style="max-width: 200px; height: auto;">
+                        </div>
                         <h2 class="section-title">Our Mission</h2>
                         <div class="mission-content" style="max-width: 800px; margin: 0 auto;">
                             <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">AWOMI UMTHOMBO Feeding Scheme is a Cape Town, Khayelitsha-based non-profit organisation established to combat food insecurity. The organisation operates a community feeding program providing daily meals to vulnerable individuals.</p>
@@ -87,6 +90,9 @@
             <div class="page">
                 <section class="section">
                     <div class="container">
+                        <div style="text-align: center; margin-bottom: 2rem;">
+                            <img src="images/logo.webp" alt="Awomi Umthombho" style="max-width: 200px; height: auto;">
+                        </div>
                         <h2 class="section-title">Governance Structure</h2>
                         <div class="governance-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; max-width: 800px; margin: 0 auto;">
                             <div class="governance-card" style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center;">
@@ -146,7 +152,7 @@
                 <section class="section">
                     <div class="container">
                         <div style="text-align: center; margin-bottom: 2rem;">
-                            <img src="images/logo.png" alt="Awomi Umthombho" style="max-width: 200px; height: auto;">
+                            <img src="images/logo.webp" alt="Awomi Umthombho" style="max-width: 200px; height: auto;">
                         </div>
                         <h2 class="section-title">Contact Us</h2>
                         <div class="contact-grid">
