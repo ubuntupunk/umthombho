@@ -95,23 +95,23 @@
                         </div>
                         <h2 class="section-title">Governance Structure</h2>
                         <div class="governance-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; max-width: 800px; margin: 0 auto;">
-                            <div class="governance-card" style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center;">
+                            <div class="governance-card" style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 35px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)'">
                                 <h3 style="color: var(--primary); font-size: 1.25rem;">Chairperson</h3>
                                 <p style="font-size: 1.1rem; font-weight: 600; margin-top: 0.5rem;">Geoffrey Masixole Ralarala</p>
                             </div>
-                            <div class="governance-card" style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center;">
+                            <div class="governance-card" style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 35px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)'">
                                 <h3 style="color: var(--primary); font-size: 1.25rem;">Treasurer</h3>
                                 <p style="font-size: 1.1rem; font-weight: 600; margin-top: 0.5rem;">Mzwamadoda Mlando</p>
                             </div>
-                            <div class="governance-card" style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center;">
+                            <div class="governance-card" style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 35px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)'">
                                 <h3 style="color: var(--primary); font-size: 1.25rem;">Secretary</h3>
                                 <p style="font-size: 1.1rem; font-weight: 600; margin-top: 0.5rem;">Kenneth Ngece</p>
                             </div>
-                            <div class="governance-card" style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center;">
+                            <div class="governance-card" style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 35px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)'">
                                 <h3 style="color: var(--primary); font-size: 1.25rem;">Operations Manager</h3>
                                 <p style="font-size: 1.1rem; font-weight: 600; margin-top: 0.5rem;">Lolly</p>
                             </div>
-                            <div class="governance-card" style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center;">
+                            <div class="governance-card" style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 35px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)'">
                                 <h3 style="color: var(--primary); font-size: 1.25rem;">Volunteer Coordinator</h3>
                                 <p style="font-size: 1.1rem; font-weight: 600; margin-top: 0.5rem;">Thanda</p>
                             </div>
