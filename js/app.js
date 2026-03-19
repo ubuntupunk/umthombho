@@ -42,12 +42,12 @@
                             <p>Providing hundreds of nutritious meals daily to community members in need.</p>
                         </div>
                         <div class="service-card">
-                            <div class="service-icon">👶🏿</div>
+                            <img src="images/child.webp" alt="Children" style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%; margin-bottom: 1rem;">
                             <h3>Children's Program</h3>
                             <p>Ensuring children receive proper nutrition for healthy growth and development.</p>
                         </div>
                         <div class="service-card">
-                            <div class="service-icon">👴🏿</div>
+                            <img src="images/elder.webp" alt="Elderly" style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%; margin-bottom: 1rem;">
                             <h3>Elderly Support</h3>
                             <p>Delivering meals to elderly residents who may have limited access to food.</p>
                         </div>
