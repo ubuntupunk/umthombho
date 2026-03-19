@@ -15,7 +15,7 @@
 
     function renderHome() {
         return `
-            <div class="hero" style="background-image: url('images/photo1.jpeg')">
+            <div class="hero" style="background-image: url('images/photo1.webp')">
                 <div class="hero-content">
                     <h1>Nourishing Lives, Building Community</h1>
                     <p>Awomi Umthombho Feeding Scheme is dedicated to providing nutritious meals to those in need in Mandela Park, Khayelitsha.</p>
@@ -62,7 +62,7 @@
                     <div class="container">
                         <div class="bio-content">
                             <div class="bio-image">
-                                <img src="images/photo2.jpeg" alt="Founder of Awomi Umthombho">
+                                <img src="images/photo2.webp" alt="Founder of Awomi Umthombho">
                             </div>
                             <div class="bio-text">
                                 <h2>Our Founder's Vision</h2>
@@ -85,8 +85,8 @@
                         <h2 class="section-title">Contact Us</h2>
                         <div class="contact-grid">
                             <div class="contact-form">
-                                <div class="form-success" id="formSuccess">Thank you for your message! We'll get back to you soon.</div>
-                                <form id="contactForm">
+                                <div class="form-success" id="formSuccess">Thank you! Your email client should open to send the message.</div>
+                                <form id="contactForm" action="mailto:masxoleralarala@gmail.com" method="post" enctype="text/plain">
                                     <div class="form-group">
                                         <label for="name">Name</label>
                                         <input type="text" id="name" name="name" required>
@@ -107,8 +107,9 @@
                             </div>
                             <div class="contact-info">
                                 <div class="info-card">
-                                    <h3>Visit Us</h3>
+                                    <h3>Contact Us</h3>
                                     <p>22 035 Lambede Crescent<br>Mandela Park<br>Khayelitsha 7784</p>
+                                    <p style="margin-top: 1rem;"><a href="mailto:masxoleralarala@gmail.com">masxoleralarala@gmail.com</a></p>
                                 </div>
                                 <div class="info-card">
                                     <h3>Our Location</h3>
@@ -158,8 +159,6 @@
         if (!form) return;
         
         form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
             let isValid = true;
             const formGroups = form.querySelectorAll('.form-group');
             
@@ -182,6 +181,8 @@
                 setTimeout(() => {
                     formSuccess.classList.remove('show');
                 }, 5000);
+            } else {
+                e.preventDefault();
             }
         });
         
