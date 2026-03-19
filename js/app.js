@@ -65,8 +65,10 @@
                                 <img src="images/photo2.webp" alt="Founder of Awomi Umthombho">
                             </div>
                             <div class="bio-text">
-                                <h2>Our Founder's Vision</h2>
-                                <p>Awomi Umthombho was founded with a simple belief: that every person deserves access to nutritious food. What started as a small initiative to feed a handful of neighbors has grown into a community pillar serving hundreds of meals each day.</p>
+                                <h2>Our Founder</h2>
+                                <h3 style="color: var(--accent); margin-bottom: 1rem;">Geoffrey Masixole Ralarala</h3>
+                                <p>Founder & Director</p>
+                                <p style="margin-top: 1.5rem;">Awomi Umthombho was founded with a simple belief: that every person deserves access to nutritious food. What started as a small initiative to feed a handful of neighbors has grown into a community pillar serving hundreds of meals each day.</p>
                                 <p>Our founder, deeply rooted in the Mandela Park community, recognized that hunger was not just an individual problem but a community challenge that required collective action. Through dedication, compassion, and unwavering commitment, the feeding scheme has become a beacon of hope for many families.</p>
                                 <p>We continue to expand our reach while maintaining our core mission: nourishing bodies, feeding souls, and building a stronger, more resilient community.</p>
                             </div>
