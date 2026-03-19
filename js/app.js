@@ -9,6 +9,7 @@
 
     const routes = {
         '/': renderHome,
+        '/mission': renderMission,
         '/biography': renderBiography,
         '/contact': renderContact
     };
@@ -52,6 +53,31 @@
                     </div>
                 </div>
             </section>
+        `;
+    }
+
+    function renderMission() {
+        return `
+            <div class="page">
+                <section class="section">
+                    <div class="container">
+                        <h2 class="section-title">Our Mission</h2>
+                        <div class="mission-content" style="max-width: 800px; margin: 0 auto;">
+                            <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">AWOMI UMTHOMBO Feeding Scheme is a Cape Town, Khayelitsha-based non-profit organisation established to combat food insecurity. The organisation operates a community feeding program providing daily meals to vulnerable individuals.</p>
+                            <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">The project seeks funding, partnerships, and donations to sustain operations and expand its impact.</p>
+                            
+                            <h3 style="color: var(--primary); margin: 2rem 0 1rem;">Problem Statement</h3>
+                            <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">Food insecurity remains a critical issue in South Africa. Many households in Cape Town struggle with unemployment and poverty, resulting in children going to school hungry and families lacking access to basic nutrition.</p>
+                            <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">The feeding scheme aims to alleviate hunger while improving health, dignity, and social stability.</p>
+                            
+                            <div style="margin-top: 2rem; padding: 1.5rem; background: white; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                                <p style="font-weight: 600; margin-bottom: 0.5rem;">Download our business profile</p>
+                                <a href="docs/Awomi Umthombho Feeding Scheme business profle.docx" class="btn" download>Download Doc</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
         `;
     }
 
