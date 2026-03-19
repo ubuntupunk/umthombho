@@ -1,0 +1,201 @@
+(function() {
+    const app = document.getElementById('app');
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+
+    navToggle.addEventListener('click', () => {
+        nav.classList.toggle('open');
+    });
+
+    const routes = {
+        '/': renderHome,
+        '/biography': renderBiography,
+        '/contact': renderContact
+    };
+
+    function renderHome() {
+        return `
+            <div class="hero" style="background-image: url('images/photo1.jpeg')">
+                <div class="hero-content">
+                    <h1>Nourishing Lives, Building Community</h1>
+                    <p>Awomi Umthombho Feeding Scheme is dedicated to providing nutritious meals to those in need in Mandela Park, Khayelitsha.</p>
+                    <a href="#/contact" class="btn">Get Involved</a>
+                </div>
+            </div>
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">Our Mission</h2>
+                    <div class="mission">
+                        <p>To combat hunger and malnutrition in our community by providing balanced, nutritious meals to children, families, and elderly residents. We believe that no one should go to bed hungry, and that good nutrition is the foundation for a healthy, productive life.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="section section-alt">
+                <div class="container">
+                    <h2 class="section-title">What We Do</h2>
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-icon">🍲</div>
+                            <h3>Daily Meals</h3>
+                            <p>Providing hundreds of nutritious meals daily to community members in need.</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">👶</div>
+                            <h3>Children's Program</h3>
+                            <p>Ensuring children receive proper nutrition for healthy growth and development.</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">👴</div>
+                            <h3>Elderly Support</h3>
+                            <p>Delivering meals to elderly residents who may have limited access to food.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        `;
+    }
+
+    function renderBiography() {
+        return `
+            <div class="page">
+                <section class="section">
+                    <div class="container">
+                        <div class="bio-content">
+                            <div class="bio-image">
+                                <img src="images/photo2.jpeg" alt="Founder of Awomi Umthombho">
+                            </div>
+                            <div class="bio-text">
+                                <h2>Our Founder's Vision</h2>
+                                <p>Awomi Umthombho was founded with a simple belief: that every person deserves access to nutritious food. What started as a small initiative to feed a handful of neighbors has grown into a community pillar serving hundreds of meals each day.</p>
+                                <p>Our founder, deeply rooted in the Mandela Park community, recognized that hunger was not just an individual problem but a community challenge that required collective action. Through dedication, compassion, and unwavering commitment, the feeding scheme has become a beacon of hope for many families.</p>
+                                <p>We continue to expand our reach while maintaining our core mission: nourishing bodies, feeding souls, and building a stronger, more resilient community.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        `;
+    }
+
+    function renderContact() {
+        return `
+            <div class="page">
+                <section class="section">
+                    <div class="container">
+                        <h2 class="section-title">Contact Us</h2>
+                        <div class="contact-grid">
+                            <div class="contact-form">
+                                <div class="form-success" id="formSuccess">Thank you for your message! We'll get back to you soon.</div>
+                                <form id="contactForm">
+                                    <div class="form-group">
+                                        <label for="name">Name</label>
+                                        <input type="text" id="name" name="name" required>
+                                        <span class="error">Please enter your name</span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="email" id="email" name="email" required>
+                                        <span class="error">Please enter a valid email</span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message">Message</label>
+                                        <textarea id="message" name="message" required></textarea>
+                                        <span class="error">Please enter your message</span>
+                                    </div>
+                                    <button type="submit" class="btn">Send Message</button>
+                                </form>
+                            </div>
+                            <div class="contact-info">
+                                <div class="info-card">
+                                    <h3>Visit Us</h3>
+                                    <p>22 035 Lambede Crescent<br>Mandela Park<br>Khayelitsha 7784</p>
+                                </div>
+                                <div class="info-card">
+                                    <h3>Our Location</h3>
+                                    <div class="map-container">
+                                        <iframe 
+                                            src="https://www.openstreetmap.org/export/embed.html?bbox=18.63%2C-34.05%2C18.65%2C-34.03&amp;layer=mapnik&amp;marker=-34.046%2C18.641"
+                                            loading="lazy">
+                                        </iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        `;
+    }
+
+    function handleRoute() {
+        const hash = window.location.hash.slice(1) || '/';
+        const route = routes[hash] || routes['/'];
+        
+        app.innerHTML = route();
+        
+        updateNav(hash);
+        
+        if (hash === '/contact') {
+            initContactForm();
+        }
+        
+        window.scrollTo(0, 0);
+    }
+
+    function updateNav(hash) {
+        document.querySelectorAll('.nav a').forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + hash) {
+                link.classList.add('active');
+            }
+        });
+    }
+
+    function initContactForm() {
+        const form = document.getElementById('contactForm');
+        const formSuccess = document.getElementById('formSuccess');
+        
+        if (!form) return;
+        
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            let isValid = true;
+            const formGroups = form.querySelectorAll('.form-group');
+            
+            formGroups.forEach(group => {
+                const input = group.querySelector('input, textarea');
+                if (!input.value.trim()) {
+                    group.classList.add('error');
+                    isValid = false;
+                } else if (input.type === 'email' && !isValidEmail(input.value)) {
+                    group.classList.add('error');
+                    isValid = false;
+                } else {
+                    group.classList.remove('error');
+                }
+            });
+            
+            if (isValid) {
+                formSuccess.classList.add('show');
+                form.reset();
+                setTimeout(() => {
+                    formSuccess.classList.remove('show');
+                }, 5000);
+            }
+        });
+        
+        form.querySelectorAll('input, textarea').forEach(input => {
+            input.addEventListener('input', function() {
+                this.closest('.form-group').classList.remove('error');
+            });
+        });
+    }
+
+    function isValidEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    window.addEventListener('hashchange', handleRoute);
+    window.addEventListener('load', handleRoute);
+})();
