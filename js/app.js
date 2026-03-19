@@ -10,6 +10,7 @@
     const routes = {
         '/': renderHome,
         '/mission': renderMission,
+        '/governance': renderGovernance,
         '/biography': renderBiography,
         '/contact': renderContact
     };
@@ -73,6 +74,40 @@
                             <div style="margin-top: 2rem; padding: 1.5rem; background: white; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
                                 <p style="font-weight: 600; margin-bottom: 0.5rem;">Download our business profile</p>
                                 <a href="docs/Awomi Umthombho Feeding Scheme business profle.docx" class="btn" download>Download Doc</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        `;
+    }
+
+    function renderGovernance() {
+        return `
+            <div class="page">
+                <section class="section">
+                    <div class="container">
+                        <h2 class="section-title">Governance Structure</h2>
+                        <div class="governance-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; max-width: 800px; margin: 0 auto;">
+                            <div class="governance-card" style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center;">
+                                <h3 style="color: var(--primary); font-size: 1.25rem;">Chairperson</h3>
+                                <p style="font-size: 1.1rem; font-weight: 600; margin-top: 0.5rem;">Geoffrey Masixole Ralarala</p>
+                            </div>
+                            <div class="governance-card" style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center;">
+                                <h3 style="color: var(--primary); font-size: 1.25rem;">Treasurer</h3>
+                                <p style="font-size: 1.1rem; font-weight: 600; margin-top: 0.5rem;">Mzwamadoda Mlando</p>
+                            </div>
+                            <div class="governance-card" style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center;">
+                                <h3 style="color: var(--primary); font-size: 1.25rem;">Secretary</h3>
+                                <p style="font-size: 1.1rem; font-weight: 600; margin-top: 0.5rem;">Kenneth Ngece</p>
+                            </div>
+                            <div class="governance-card" style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center;">
+                                <h3 style="color: var(--primary); font-size: 1.25rem;">Operations Manager</h3>
+                                <p style="font-size: 1.1rem; font-weight: 600; margin-top: 0.5rem;">Lolly</p>
+                            </div>
+                            <div class="governance-card" style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center;">
+                                <h3 style="color: var(--primary); font-size: 1.25rem;">Volunteer Coordinator</h3>
+                                <p style="font-size: 1.1rem; font-weight: 600; margin-top: 0.5rem;">Thanda</p>
                             </div>
                         </div>
                     </div>
