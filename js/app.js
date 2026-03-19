@@ -145,6 +145,9 @@
             <div class="page">
                 <section class="section">
                     <div class="container">
+                        <div style="text-align: center; margin-bottom: 2rem;">
+                            <img src="images/logo.png" alt="Awomi Umthombho" style="max-width: 200px; height: auto;">
+                        </div>
                         <h2 class="section-title">Contact Us</h2>
                         <div class="contact-grid">
                             <div class="contact-form">
