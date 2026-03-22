@@ -282,6 +282,10 @@
     function handleRoute() {
         const hash = window.location.hash.slice(1) || '/';
         
+        if (hash.startsWith('invite_token=')) {
+            return;
+        }
+        
         let route = routes[hash];
         let param = null;
         

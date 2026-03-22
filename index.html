@@ -61,9 +61,15 @@
         </div>
     </footer>
 
-    <script src="js/app.js"></script>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script>
+        if (window.location.hash.startsWith('#invite_token=')) {
+            window.netlifyIdentity.on('init', function(user) {
+                if (!user) {
+                    window.netlifyIdentity.refresh();
+                }
+            });
+        }
         if (window.netlifyIdentity) {
             window.netlifyIdentity.on("init", user => {
                 if (!user) {
@@ -74,5 +80,6 @@
             });
         }
     </script>
+    <script src="js/app.js"></script>
 </body>
 </html>
