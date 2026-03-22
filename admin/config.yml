@@ -28,10 +28,10 @@ roles:
     name: "contributor"
 
 collections:
-  - name: "blog"
+  - name: "journal"
     label: "Journal"
     label_singular: "Journal Entry"
-    folder: "content/blog"
+    folder: "content/journal"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     i18n: true
