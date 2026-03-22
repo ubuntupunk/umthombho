@@ -4,7 +4,7 @@ en:
   title: Netbones is Proud to Sponsor Umthombhu
   date: 2026-03-22T09:27:00.000+02:00
   description: Welcome to Netbones DeCap
-  image: /images/uploads/scene.jpeg
+  image: /images/uploads/cappucino.jpg
   body: >-
     # Welcome to DeCap! 🎉
 
