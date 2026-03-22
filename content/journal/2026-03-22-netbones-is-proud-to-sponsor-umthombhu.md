@@ -7,6 +7,10 @@ en:
   image: /images/uploads/scene.jpeg
   body: This is your first post
 xh: {}
+language: en
+title: Welcome to Netbones DeCap
+date: 2026-03-22T12:16:00.000+02:00
+description: get a cup of decappinated
 ---
 # Welcome to Netbones DeCap! 🎉
 
