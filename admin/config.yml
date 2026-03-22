@@ -13,9 +13,12 @@ logo:
 
 display_url: "https://umthombho.netlify.app"
 
+locale: "xh"
+
 collections:
   - name: "blog"
     label: "Blog Posts"
+    label_singular: "Blog Post"
     folder: "content/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"

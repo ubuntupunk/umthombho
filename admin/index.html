@@ -7,5 +7,188 @@
 </head>
 <body>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+        const xhosaLocale = {
+            app: {
+                header: {
+                    content: "Iinkcukacha",
+                    workflow: "Umsebenzi",
+                    media: "Amaxwebhu",
+                    quickAdd: "Yongeza ngokukhawula"
+                },
+                notFoundPage: {
+                    title: "Iphepha alifunyanwanga",
+                    details: "Akukho nto ifunyenwe kule URL.",
+                    returnHome: "Buyela ekhaya",
+                    authStated: "Ukungena kwimeko ngokwayo kulindelwe..."
+                },
+                build: {
+                    building: "Ukwakha...",
+                    error: "Impazamo: %{error}"
+                },
+                entry: {
+                    draft: "Ushicilelo",
+                    publishing: "Ukushicilela...",
+                    publish: "Shicilela",
+                    published: "Ishicilelwe",
+                    unpublish: "Ungashicileli",
+                    update: "Hlaziya",
+                    deleting: "Ikheli...",
+                    delete: "Cima",
+                    moreItems: "Izinto ezingaphezulu"
+                },
+                editor: {
+                    onLeavePage: "Oku kulungisweyo akuhlaziywanga.",
+                    onUpdatingEntry: "Hlaziya ikheli...",
+                    onPublishingEntry: "Shicilela ikheli...",
+                    onPublishingDeletedEntry: "Cima ikheli...",
+                    onUnpublishingEntry: "Susa ukushicilelwa...",
+                    onDeleteEntry: "Cima eli kheli...",
+                    onPublishingDraft: "Shicilela iskhirishi...",
+                    onMaxFileSize: "Ifayile: %{filename} idlula ulwabiwo olungaxhamli: %{maxSize}.",
+                    onFileTypeNotAllowed: "Iifayile ze: %{extension} azivumelekanga.",
+                    onUploadAborted: "Ukulayisha kophulwe",
+                    onUploadError: "Impazamo yokulayisha: %{error}",
+                    loadingEntry: "Layisha ikheli...",
+                    confirmDeleteMedia: "Ukhuphelo lwe-%{folder} luya kucinywa. Qinisekisa.",
+                    uploadMedia: "Layisha amaxwebhu",
+                    uploadOptions: "Ukulayisha iinketho",
+                    showInRepo: "Bonisa kwi-repository",
+                    copyPath: "Kopa indlela",
+                    deletePath: "Cima indlela",
+                    editPath: "Hlela indlela",
+                    assetsOnly: "ii-assets kuphela"
+                },
+                editorBlock: {
+                    onAddBlock: "Yongeza ibhloko",
+                    onRemoveBlock: "Susa ibhloko"
+                },
+                editorControl: {
+                    onChangeField: "Guqula inkcukacha: %{field}",
+                    onAddAsset: "Yongeza ixwebhu: %{path}",
+                    onRemoveAsset: "Cima ixwebhu: %{path}",
+                    onAddObject: "Yongeza into",
+                    onRemoveObject: "Susa into",
+                    onAddBlock: "Yongeza ibhloko: %{block}"
+                },
+                editorInterface: {
+                    onChangeMetaField: "Guqula inkcukacha: %{field}",
+                    onChangeStatus: "Guqula isimo: %{state}",
+                    onChangeDraft: "Guqula iskhirishi: %{draft}",
+                    onPublish: "Shicilela",
+                    onUnpublish: "Ungashicileli",
+                    onUpdate: "Hhlaziya",
+                    onDelete: "Cima",
+                    onMoreFields: "Eminye imimandla",
+                    onLessFields: "Imimandla embalwa",
+                    loadingAsset: "Layisha ixwebhu...",
+                    loadingEntry: "Layisha ikheli..."
+                },
+                mediaLibrary: {
+                    onLoadMoreMedia: "Layisha amaxwebhu amaninzi...",
+                    fileTooLargeMsg: "Ifayile: '%{filename}' inkulu kakhulu. Ulwabiwo olungaxhamli: %{maxSize}",
+                    confirmDeleteMedia: "Uqinisekiso lokucima: '%{path}'",
+                    loadingMedia: "Layisha amaxwebhu...",
+                    noMedia: "Akukho maxwebhu",
+                    noMediaFound: "Akukho maxwebhu afunyenweyo.",
+                    fileName: "Igama lefayile",
+                    fileSize: "Ubungakanani",
+                    dimensions: "IDimensions",
+                    date: "Umhla",
+                    delete: "Cima",
+                    deleteConfirm: "Ukhuphelo lwe-%{folder} luya kucinywa.",
+                    collectionHasNote: "Qaphela: %{note}"
+                },
+                mediaLibraryModal: {
+                    loadingMedia: "Layisha amaxwebhu...",
+                    noResults: "Akukho的结果.",
+                    noMediaFound: "Akukho maxwebhu afunyenweyo.",
+                    upload: "Layisha"
+                },
+                ourEntries: {
+                    loading: "Layisha izindululo...",
+                    noResults: "Akukho ziphumo.",
+                    searchFailed: "Ukusoka kuhlulekile: %{error}",
+                    searchNotFound: "Akukho ziphumo zafunyanwa.",
+                    first: "Okwangoku akukho nto.",
+                    last: "NDIYE.",
+                    prev: "ngaphambili",
+                    next: "elandelayo",
+                    pageOf: "Ikhasi le-%{page} ye-%{pages}"
+                },
+                search: {
+                    searching: "ukusoka...",
+                    noResults: "akukho ziphumo.",
+                    resultOfResults: "%{count} iziphumo ze-%{term}"
+                },
+                shortcodes: {
+                    onError: "Impazamo yeskhirishi: %{error}",
+                    onResult: "Isiphumo seskhirishi: %{result}"
+                },
+                shortcuts: {
+                    shortcuts: "Ama-shortcut",
+                    showShortcuts: "Bonisa ama-shortcut",
+                    hideShortcuts: "Cima ama-shortcut",
+                    toggleSidebar: "Guqula i-sidebar",
+                    searchButton: "Sokela",
+                    metaEnter: "Save and create new entry",
+                    shiftEnter: "Save and continue editing",
+                    altMarkdown: "Insert static value"
+                },
+                slug: {
+                    lockMessagePreview: "Ukuhlambela: Ukuhlambela kugcinwe kwindawo.",
+                    unlockMessagePreview: "Ukuhlambela: Ukuhlambela akugcinwanga.",
+                    lockMessagePublish: "Ukushicilela: Ukuhlambela kugcinwe kwindawo.",
+                    unlockMessagePublish: "Ukushicilela: Ukuhlambela akugcinwanga."
+                },
+                submissionWorkflow: {
+                    onSubmitEntry: "Nika ikheli...",
+                    onSubmitForReview: "Nika ukujongwa...",
+                    confirmForReview: "Ukhuphelo lulungele ukujongwa?",
+                    confirmDiscardDraft: "Ukhuphelo luyasicazululwa?",
+                    review: "Jonga",
+                    draft: "Ushicilelo",
+                    deleteDraft: "Cima iskhirishi",
+                    discardDraft: "Lahla iskhirishi",
+                    deleteEntry: "Cima ikheli",
+                    discardChanges: "Lahla iinguquko",
+                    publish: "Shicilela",
+                    publishNew: "Shicilela entsha",
+                    update: "Hlaziya",
+                    updateAndPublish: "Hlaziya kwaye ushicilele",
+                    convertToDraft: "Guqula iskhirishi",
+                    orCancel: "okanye, rarga"
+                },
+                workflow: {
+                    onFilter: "Isihlungi: %{filter}",
+                    onFilterByUser: "Isihlungi: %{author}",
+                    onFilterByStatus: "Isihlungi: %{status}",
+                    onSearch: "Soka %{searchTerm}",
+                    headerFilter: "Isihlungi",
+                    clearFilter: "Isihlungi esincinci",
+                    filterDrafts: "Iinkshintshi",
+                    filterPending: "Amashicilelo olindeleyo",
+                    filterPublished: "Iishicilelwe",
+                    selectFilter: "Khetha isihlungi...",
+                    batchEdit: "Ulungise ngobuninzi",
+                    addFilter: "Yongeza isihlungi"
+                }
+            },
+            i18n: {
+                locales: {
+                    xh: "isiXhosa",
+                    en: "English"
+                },
+                currentLocale: "Umxholo wangoku: %{locale}"
+            },
+            auth: {
+                onLogin: "Ngena ngemvume...",
+                onLogout: "Phuma",
+                onIdentityTriggerClick: "Nika iinkcukacha..."
+            }
+        };
+
+        window.decapCMS.registerLocale('xh', xhosaLocale);
+    </script>
 </body>
 </html>
