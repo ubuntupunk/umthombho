@@ -20,8 +20,8 @@ roles:
 
 collections:
   - name: "blog"
-    label: "Blog Posts"
-    label_singular: "Blog Post"
+    label: "Journal"
+    label_singular: "Journal Entry"
     folder: "content/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"

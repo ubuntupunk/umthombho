@@ -36,8 +36,8 @@
         '/governance': renderGovernance,
         '/biography': renderBiography,
         '/contact': renderContact,
-        '/blog': renderBlogList,
-        '/blog/:slug': renderBlogPost
+        '/journal': renderBlogList,
+        '/journal/:slug': renderBlogPost
     };
 
     function renderHome() {
@@ -247,7 +247,7 @@
                             ${blogPosts.map(post => `
                                 <article class="blog-preview">
                                     ${post.image ? `<img src="${post.image}" alt="${post.title}">` : ''}
-                                    <h2><a href="/blog/${post.slug}">${post.title}</a></h2>
+                                    <h2><a href="/journal/${post.slug}">${post.title}</a></h2>
                                     <time>${new Date(post.date).toLocaleDateString()}</time>
                                     <p>${post.description}</p>
                                 </article>
