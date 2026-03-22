@@ -1,6 +1,6 @@
 [build]
   publish = "."
-  command = "npm install && npm run prebuild"
+  command = "npm install --include=dev && npm run prebuild"
 
 [build.environment]
   NODE_VERSION = "18"
