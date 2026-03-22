@@ -23,14 +23,31 @@ async function buildBlog() {
         const content = fs.readFileSync(file, 'utf8');
         const { data, content: body } = matter(content);
         const slug = path.basename(file, '.md');
+        
+        let title, date, description, image, postBody;
+        
+        if (data.en) {
+            title = data.en.title || 'Untitled';
+            date = data.en.date || new Date().toISOString();
+            description = data.en.description || '';
+            image = data.en.image || null;
+            postBody = data.en.body || body || '';
+        } else {
+            title = data.title || 'Untitled';
+            date = data.date || new Date().toISOString();
+            description = data.description || '';
+            image = data.image || null;
+            postBody = body || '';
+        }
+        
         return {
             slug,
-            title: data.title || 'Untitled',
-            date: data.date || new Date().toISOString(),
-            description: data.description || '',
-            image: data.image || null,
-            html: md.render(body),
-            excerpt: body.substring(0, 200) + '...'
+            title,
+            date,
+            description,
+            image,
+            html: md.render(postBody),
+            excerpt: postBody.substring(0, 200) + '...'
         };
     });
 
