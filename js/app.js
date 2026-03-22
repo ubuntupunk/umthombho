@@ -7,12 +7,28 @@
         nav.classList.toggle('open');
     });
 
+    let blogPosts = [];
+
+    async function loadBlogData() {
+        try {
+            const response = await fetch('/blog-data.json');
+            blogPosts = await response.json();
+        } catch (error) {
+            console.error('Failed to load blog posts:', error);
+            blogPosts = [];
+        }
+    }
+
+    loadBlogData();
+
     const routes = {
         '/': renderHome,
         '/mission': renderMission,
         '/governance': renderGovernance,
         '/biography': renderBiography,
-        '/contact': renderContact
+        '/contact': renderContact,
+        '/blog': renderBlogList,
+        '/blog/:slug': renderBlogPost
     };
 
     function renderHome() {
@@ -200,15 +216,99 @@
         `;
     }
 
+    function renderBlogList() {
+        if (blogPosts.length === 0) {
+            return `
+                <div class="page">
+                    <section class="section">
+                        <div class="container">
+                            <h2 class="section-title">Blog</h2>
+                            <p>No blog posts yet.</p>
+                        </div>
+                    </section>
+                </div>
+            `;
+        }
+        return `
+            <div class="page">
+                <section class="section">
+                    <div class="container">
+                        <h2 class="section-title">Blog</h2>
+                        <div class="blog-list">
+                            ${blogPosts.map(post => `
+                                <article class="blog-preview">
+                                    ${post.image ? `<img src="${post.image}" alt="${post.title}">` : ''}
+                                    <h2><a href="#/blog/${post.slug}">${post.title}</a></h2>
+                                    <time>${new Date(post.date).toLocaleDateString()}</time>
+                                    <p>${post.description}</p>
+                                </article>
+                            `).join('')}
+                        </div>
+                    </div>
+                </section>
+            </div>
+        `;
+    }
+
+    function renderBlogPost(slug) {
+        const post = blogPosts.find(p => p.slug === slug);
+        if (!post) {
+            return `
+                <div class="page">
+                    <section class="section">
+                        <div class="container">
+                            <h1>Post not found</h1>
+                        </div>
+                    </section>
+                </div>
+            `;
+        }
+        return `
+            <div class="page">
+                <section class="section">
+                    <div class="container">
+                        <article class="blog-post">
+                            <h1>${post.title}</h1>
+                            <time>${new Date(post.date).toLocaleDateString()}</time>
+                            ${post.image ? `<img src="${post.image}" alt="${post.title}">` : ''}
+                            <div class="content">${post.html}</div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+        `;
+    }
+
     function handleRoute() {
         const hash = window.location.hash.slice(1) || '/';
-        const route = routes[hash] || routes['/'];
         
-        app.innerHTML = route();
+        let route = routes[hash];
+        let param = null;
         
-        updateNav(hash);
+        if (!route) {
+            for (const [path, handler] of Object.entries(routes)) {
+                if (path.includes(':')) {
+                    const colonIndex = path.indexOf(':');
+                    const routeBase = path.substring(0, colonIndex);
+                    if (hash.startsWith(routeBase)) {
+                        param = hash.substring(routeBase.length);
+                        route = handler;
+                        break;
+                    }
+                }
+            }
+        }
         
-        if (hash === '/contact') {
+        if (!route) {
+            route = routes['/'];
+        }
+        
+        app.innerHTML = route(param);
+        
+        const baseHash = param ? hash.substring(0, hash.length - param.length) : hash;
+        updateNav(baseHash);
+        
+        if (baseHash === '/contact') {
             initContactForm();
         }
         
