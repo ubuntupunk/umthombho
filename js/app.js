@@ -20,7 +20,7 @@
 
     async function loadBlogData() {
         try {
-            const response = await fetch('/blog-data.json');
+            const response = await fetch('/journal-data.json');
             blogPosts = await response.json();
         } catch (error) {
             console.error('Failed to load blog posts:', error);
@@ -231,8 +231,8 @@
                 <div class="page">
                     <section class="section">
                         <div class="container">
-                            <h2 class="section-title">Blog</h2>
-                            <p>No blog posts yet.</p>
+                            <h2 class="section-title">Journal</h2>
+                            <p>No journal entries yet.</p>
                         </div>
                     </section>
                 </div>
@@ -242,7 +242,7 @@
             <div class="page">
                 <section class="section">
                     <div class="container">
-                        <h2 class="section-title">Blog</h2>
+                        <h2 class="section-title">Journal</h2>
                         <div class="blog-list">
                             ${blogPosts.map(post => `
                                 <article class="blog-preview">

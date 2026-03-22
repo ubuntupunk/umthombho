@@ -11,8 +11,8 @@ const md = new MarkdownIt({
 });
 
 async function buildBlog() {
-    const contentDir = './content/blog';
-    const outputFile = './blog-data.json';
+    const contentDir = './content/journal';
+    const outputFile = './journal-data.json';
 
     if (!fs.existsSync(contentDir)) {
         fs.mkdirSync(contentDir, { recursive: true });
