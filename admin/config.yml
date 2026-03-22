@@ -10,6 +10,7 @@ logo:
   show_in_header: true
 
 display_url: "https://umthombho.netlify.app"
+site_url: "https://umthombho.netlify.app"
 
 locale: "en"
 
