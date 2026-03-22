@@ -1,15 +1,6 @@
 ---
-en:
-  language: en
-  title: Netbones is Proud to Sponsor Umthombhu
-  date: 2026-03-22T09:27:00.000+02:00
-  description: sponsorship announced
-  image: /images/uploads/scene.jpeg
-  body: Netbones South Africa Proudly Sponsors Umthombho
-xh: {}
-language: en
-title: Netbones South Africa Proudly Sponsors Umthombho
-date: 2026-03-22T12:48:00.000+02:00
+title: Netbones is Proud to Sponsor Umthombhu
+date: 2026-03-22T09:27:00.000+02:00
 description: sponsorship announced
 image: /images/uploads/scene.jpeg
 ---
