@@ -63,10 +63,6 @@
 
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script>
-        if (window.location.hash.startsWith('#invite_token=')) {
-            history.replaceState(null, '', window.location.pathname);
-            window.location.reload();
-        }
         if (window.netlifyIdentity) {
             window.netlifyIdentity.on("init", user => {
                 if (!user) {
