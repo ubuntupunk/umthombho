@@ -11,7 +11,10 @@ language: en
 title: Welcome to Netbones DeCap
 date: 2026-03-22T12:16:00.000+02:00
 description: get a cup of decappinated
+image: /images/uploads/scene.jpeg
 ---
+
+
 # Welcome to Netbones DeCap! 🎉
 
 
