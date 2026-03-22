@@ -31,7 +31,7 @@ async function buildBlog() {
             date = data.en.date || new Date().toISOString();
             description = data.en.description || '';
             image = data.en.image || null;
-            postBody = data.en.body || body || '';
+            postBody = body || data.en.body || '';
         } else {
             title = data.title || 'Untitled';
             date = data.date || new Date().toISOString();
