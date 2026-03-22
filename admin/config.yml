@@ -15,6 +15,13 @@ display_url: "https://umthombho.netlify.app"
 
 locale: "xh"
 
+i18n:
+  structure: single_file
+  locales:
+    - en
+    - xh
+  default_locale: en
+
 collections:
   - name: "blog"
     label: "Blog Posts"
@@ -22,7 +29,9 @@ collections:
     folder: "content/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    i18n: true
     fields:
+      - {label: "Language", name: "language", widget: "select", options: [{label: "English", value: "en"}, {label: "isiXhosa", value: "xh"}], default: "en"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "string"}
