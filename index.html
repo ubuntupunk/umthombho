@@ -27,6 +27,7 @@
                 <a href="#/governance">Governance</a>
                 <a href="#/biography">Biography</a>
                 <a href="#/contact">Contact</a>
+                <a href="#/blog">Blog</a>
             </nav>
         </div>
     </header>
@@ -46,6 +47,7 @@
                 <a href="#/governance">Governance</a>
                 <a href="#/biography">Biography</a>
                 <a href="#/contact">Contact</a>
+                <a href="#/blog">Blog</a>
             </div>
             <div class="footer-contact">
                 <h4>Contact</h4>
@@ -59,6 +61,25 @@
         </div>
     </footer>
 
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+        if (window.location.hash.startsWith('#invite_token=')) {
+            window.netlifyIdentity.on('init', function(user) {
+                if (!user) {
+                    window.netlifyIdentity.refresh();
+                }
+            });
+        }
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
+    </script>
     <script src="js/app.js"></script>
 </body>
 </html>
