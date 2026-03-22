@@ -7,6 +7,11 @@ en:
   image: /images/uploads/scene.jpeg
   body: Welcome to Netbones Decap
 xh: {}
+language: en
+title: Welcome to Netbones DeCap!
+date: 2026-03-22T12:50:00.000+02:00
+description: get decappinated
+image: /images/uploads/cappucino.jpg
 ---
 # Welcome to Netbones DeCap! 🎉
 
