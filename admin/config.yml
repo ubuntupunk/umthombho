@@ -5,6 +5,14 @@ backend:
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
+logo:
+  src: "/images/logo.webp"
+  show_in_header: true
+
+display_url: "https://umthombho.netlify.app"
+
+locale: "en"
+
 slug:
   encoding: "unicode"
 
