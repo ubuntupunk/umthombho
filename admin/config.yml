@@ -5,22 +5,18 @@ backend:
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
-publish_mode: editorial_workflow
+slug:
+  encoding: "unicode"
 
-logo:
-  src: "/images/logo.webp"
-  show_in_header: true
-
-display_url: "https://umthombho.netlify.app"
-
-locale: "xh"
-
-i18n:
-  structure: single_file
-  locales:
-    - en
-    - xh
-  default_locale: en
+roles:
+  - label: "Admin"
+    name: "admin"
+  - label: "Editor"
+    name: "editor"
+  - label: "Author"
+    name: "author"
+  - label: "Contributor"
+    name: "contributor"
 
 collections:
   - name: "blog"
