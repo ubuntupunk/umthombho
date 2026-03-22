@@ -5,6 +5,8 @@ backend:
 media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
 
+publish_mode: editorial_workflow
+
 collections:
   - name: "blog"
     label: "Blog Posts"
@@ -17,3 +19,5 @@ collections:
       - {label: "Description", name: "description", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Featured Image", name: "image", widget: "image", required: false}
+    editor:
+      preview: true
