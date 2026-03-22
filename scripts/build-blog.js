@@ -12,7 +12,7 @@ const md = new MarkdownIt({
 
 async function buildBlog() {
     const contentDir = './content/blog';
-    const outputFile = './public/blog-data.json';
+    const outputFile = './blog-data.json';
 
     if (!fs.existsSync(contentDir)) {
         fs.mkdirSync(contentDir, { recursive: true });
