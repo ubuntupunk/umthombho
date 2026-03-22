@@ -11,7 +11,7 @@ language: en
 title: Netbones South Africa Proudly Sponsors Umthombho
 date: 2026-03-22T12:48:00.000+02:00
 description: sponsorship announced
-image: /images/uploads/cappucino.jpg
+image: /images/uploads/scene.jpeg
 ---
 ## Bridging the Digital Divide, One Story at a Time
 
