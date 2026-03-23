@@ -7,6 +7,9 @@
     "build": "echo 'No build required for static site'",
     "dev": "node scripts/build-journal.js && echo 'Static site - no dev server needed'"
   },
+  "dependencies": {
+    "@netlify/identity": "^1.0.0"
+  },
   "devDependencies": {
     "gray-matter": "^4.0.3",
     "markdown-it": "^14.0.0",

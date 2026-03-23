@@ -1,4 +1,6 @@
-exports.handler = async function(event, context) {
+import { getUser } from '@netlify/identity';
+
+export const handler = async function(event, context) {
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
@@ -6,13 +8,14 @@ exports.handler = async function(event, context) {
   try {
     const { user } = JSON.parse(event.body);
 
-    const defaultRole = 'member';
+    const defaultRoles = ['member'];
 
     return {
       statusCode: 200,
       body: JSON.stringify({
         app_metadata: {
-          roles: [defaultRole]
+          ...user.app_metadata,
+          roles: defaultRoles
         }
       })
     };
