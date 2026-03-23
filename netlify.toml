@@ -6,11 +6,6 @@
 [build.environment]
   NODE_VERSION = "18"
 
-[[redirects]]
-  from = "/.netlify/functions/identity-signup"
-  to = "/.netlify/functions/identity-signup/index.js"
-  status = 200
-
 [context.production.environment]
   NETLIFY_IDENTITY_SECRET = "your-identity-secret"
 
