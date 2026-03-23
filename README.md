@@ -5,7 +5,7 @@ A vanilla JavaScript single-page application for a community feeding scheme in K
 ## Features
 
 - Vanilla JS SPA with hash-based routing
-- Decap CMS integration for blog content management
+- Decap CMS integration for journal content management
 - Netlify deployment ready
 - Responsive design
 
@@ -22,7 +22,7 @@ A vanilla JavaScript single-page application for a community feeding scheme in K
 # Install dependencies
 npm install
 
-# Generate blog data from markdown files
+# Generate journal data from markdown files
 npm run prebuild
 
 # Serve the site (any static server works)
@@ -34,15 +34,15 @@ python -m http.server 8000
 ### Development Workflow
 
 ```bash
-# After making changes to content/blog/*.md files, regenerate blog data
+# After making changes to content/journal/*.md files, regenerate journal data
 npm run prebuild
 ```
 
 The site will be available at `http://localhost:8000` (or port shown by your server).
 
-### Adding Blog Posts
+### Adding journal Posts
 
-Create markdown files in `content/blog/` with frontmatter:
+Create markdown files in `content/journal/` with frontmatter:
 
 ```markdown
 ---
@@ -75,23 +75,23 @@ After deploying to Netlify:
 
 ### Accessing the CMS
 
-Visit `/admin/` on your deployed site (e.g., `yoursite.netlify.app/admin/`) to manage blog posts.
+Visit `/admin/` on your deployed site (e.g., `yoursite.netlify.app/admin/`) to manage journal posts.
 
 ## Project Structure
 
 ```
 .
 ├── content/
-│   └── blog/           # Blog markdown files
+│   └── journal/           # journal markdown files
 ├── public/
 │   ├── admin/           # Decap CMS files
 │   │   ├── index.html
 │   │   └── config.yml
 │   ├── images/
 │   │   └── uploads/    # CMS media uploads
-│   └── blog-data.json  # Generated from markdown
+│   └── journal-data.json  # Generated from markdown
 ├── scripts/
-│   └── build-blog.js   # Converts markdown to JSON
+│   └── build-journal.js   # Converts markdown to JSON
 ├── css/
 │   └── styles.css
 ├── js/

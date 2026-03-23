@@ -2,18 +2,46 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "public/images/uploads"
+media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
-publish_mode: editorial_workflow
+logo:
+  src: "/images/logo.webp"
+  show_in_header: true
+
+display_url: "https://umthombho.netlify.app"
+site_url: "https://umthombho.netlify.app"
+
+locale: "en"
+
+i18n:
+  structure: multiple_folders
+  locales: ["en", "xh"]
+  default_locale: "en"
+
+slug:
+  encoding: "unicode"
+
+roles:
+  - label: "Admin"
+    name: "admin"
+  - label: "Editor"
+    name: "editor"
+  - label: "Author"
+    name: "author"
+  - label: "Contributor"
+    name: "contributor"
 
 collections:
-  - name: "blog"
-    label: "Blog Posts"
-    folder: "content/blog"
+  - name: "journal"
+    label: "Journal"
+    label_singular: "Journal Entry"
+    folder: "content/journal"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    i18n: false
     fields:
+      - {label: "Language", name: "language", widget: "select", options: [{label: "English", value: "en"}, {label: "isiXhosa", value: "xh"}], default: "en"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "string"}

@@ -1,0 +1,28 @@
+/* Admin-specific styles - isolate from site CSS */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+    background: #fff !important;
+    color: #333 !important;
+}
+
+/* Reset for CMS iframe preview */
+div[class*="nc-root"] *,
+div[class*="cms-preview"] *,
+div[class*="preview"] * {
+    font-family: inherit !important;
+    background: inherit !important;
+    color: inherit !important;
+}
+
+/* Ensure CMS renders correctly */
+.nc-root {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    background: #fff !important;
+}
+
+/* Fix body in iframe */
+body iframe body,
+iframe body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    background: #fff !important;
+}

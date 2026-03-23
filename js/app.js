@@ -7,11 +7,20 @@
         nav.classList.toggle('open');
     });
 
+    document.addEventListener('click', (e) => {
+        if (e.target.tagName === 'A' && e.target.href && e.target.href.startsWith(window.location.origin)) {
+            e.preventDefault();
+            const path = e.target.href.replace(window.location.origin, '');
+            history.pushState(null, '', path);
+            handleRoute();
+        }
+    });
+
     let blogPosts = [];
 
     async function loadBlogData() {
         try {
-            const response = await fetch('/blog-data.json');
+            const response = await fetch('/journal-data.json');
             blogPosts = await response.json();
         } catch (error) {
             console.error('Failed to load blog posts:', error);
@@ -27,8 +36,8 @@
         '/governance': renderGovernance,
         '/biography': renderBiography,
         '/contact': renderContact,
-        '/blog': renderBlogList,
-        '/blog/:slug': renderBlogPost
+        '/journal': renderBlogList,
+        '/journal/:slug': renderBlogPost
     };
 
     function renderHome() {
@@ -37,7 +46,7 @@
                 <div class="hero-content">
                     <h1>Nourishing Lives, Building Community</h1>
                     <p>Awomi Umthombho Feeding Scheme is dedicated to providing nutritious meals to those in need in Mandela Park, Khayelitsha.</p>
-                    <a href="#/contact" class="btn">Get Involved</a>
+                    <a href="/contact" class="btn">Get Involved</a>
                 </div>
             </div>
             <section class="section">
@@ -222,8 +231,8 @@
                 <div class="page">
                     <section class="section">
                         <div class="container">
-                            <h2 class="section-title">Blog</h2>
-                            <p>No blog posts yet.</p>
+                            <h2 class="section-title">Journal</h2>
+                            <p>No journal entries yet.</p>
                         </div>
                     </section>
                 </div>
@@ -233,12 +242,12 @@
             <div class="page">
                 <section class="section">
                     <div class="container">
-                        <h2 class="section-title">Blog</h2>
+                        <h2 class="section-title">Journal</h2>
                         <div class="blog-list">
                             ${blogPosts.map(post => `
                                 <article class="blog-preview">
                                     ${post.image ? `<img src="${post.image}" alt="${post.title}">` : ''}
-                                    <h2><a href="#/blog/${post.slug}">${post.title}</a></h2>
+                                    <h2><a href="/journal/${post.slug}">${post.title}</a></h2>
                                     <time>${new Date(post.date).toLocaleDateString()}</time>
                                     <p>${post.description}</p>
                                 </article>
@@ -280,22 +289,18 @@
     }
 
     function handleRoute() {
-        const hash = window.location.hash.slice(1) || '/';
+        const path = window.location.pathname || '/';
         
-        if (hash.startsWith('invite_token=')) {
-            return;
-        }
-        
-        let route = routes[hash];
+        let route = routes[path];
         let param = null;
         
         if (!route) {
-            for (const [path, handler] of Object.entries(routes)) {
-                if (path.includes(':')) {
-                    const colonIndex = path.indexOf(':');
-                    const routeBase = path.substring(0, colonIndex);
-                    if (hash.startsWith(routeBase)) {
-                        param = hash.substring(routeBase.length);
+            for (const [routePath, handler] of Object.entries(routes)) {
+                if (routePath.includes(':')) {
+                    const colonIndex = routePath.indexOf(':');
+                    const routeBase = routePath.substring(0, colonIndex);
+                    if (path.startsWith(routeBase)) {
+                        param = path.substring(routeBase.length);
                         route = handler;
                         break;
                     }
@@ -309,20 +314,20 @@
         
         app.innerHTML = route(param);
         
-        const baseHash = param ? hash.substring(0, hash.length - param.length) : hash;
-        updateNav(baseHash);
+        const basePath = param ? path.substring(0, path.length - param.length) : path;
+        updateNav(basePath);
         
-        if (baseHash === '/contact') {
+        if (basePath === '/contact') {
             initContactForm();
         }
         
         window.scrollTo(0, 0);
     }
 
-    function updateNav(hash) {
+    function updateNav(path) {
         document.querySelectorAll('.nav a').forEach(link => {
             link.classList.remove('active');
-            if (link.getAttribute('href') === '#' + hash) {
+            if (link.getAttribute('href') === path) {
                 link.classList.add('active');
             }
         });
@@ -373,6 +378,6 @@
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     }
 
-    window.addEventListener('hashchange', handleRoute);
+    window.addEventListener('popstate', handleRoute);
     window.addEventListener('load', handleRoute);
 })();

@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "prebuild": "node scripts/build-blog.js",
+    "prebuild": "node scripts/build-journal.js",
     "build": "echo 'No build required for static site'",
-    "dev": "node scripts/build-blog.js && echo 'Static site - no dev server needed'"
+    "dev": "node scripts/build-journal.js && echo 'Static site - no dev server needed'"
   },
   "devDependencies": {
     "gray-matter": "^4.0.3",
