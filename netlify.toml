@@ -1,6 +1,18 @@
 [build]
   publish = "."
   command = "npm install --include=dev && npm run prebuild"
+  functions = "netlify/functions"
 
 [build.environment]
   NODE_VERSION = "18"
+
+[[redirects]]
+  from = "/.netlify/functions/identity-signup"
+  to = "/.netlify/functions/identity-signup/index.js"
+  status = 200
+
+[context.production.environment]
+  NETLIFY_IDENTITY_SECRET = "your-identity-secret"
+
+[context.development.environment]
+  NETLIFY_IDENTITY_SECRET = "your-identity-secret"
