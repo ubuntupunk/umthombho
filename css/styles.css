@@ -124,6 +124,36 @@ a {
     padding: 5px;
 }
 
+.lang-toggle {
+    display: flex;
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+    margin-left: 1rem;
+    transition: background 0.3s ease;
+}
+
+.lang-toggle:hover {
+    background: var(--accent);
+}
+
+.lang-toggle .lang-en {
+    display: none;
+}
+
+.lang-toggle.xh .lang-en {
+    display: inline;
+}
+
+.lang-toggle.xh .lang-xh {
+    display: none;
+}
+
 .nav-toggle span {
     width: 25px;
     height: 3px;
@@ -478,8 +508,16 @@ main {
     h1 { font-size: 2rem; }
     h2 { font-size: 1.75rem; }
 
-    .nav-toggle {
+    .nav-toggle, .lang-toggle {
         display: flex;
+    }
+
+    .header-inner {
+        gap: 0.5rem;
+    }
+
+    .lang-toggle {
+        margin: 0;
     }
 
     .nav {
