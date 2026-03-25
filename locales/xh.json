@@ -1,0 +1,79 @@
+{
+  "nav": {
+    "home": "IKhaya",
+    "mission": "Umsebenzi",
+    "governance": "iPalamente",
+    "biography": "IBhayografi",
+    "journal": "Ijenali",
+    "contact": "uXhumano"
+  },
+  "hero": {
+    "title": "Ukondla iMoya, ukwakha iCommunity",
+    "subtitle": "I-Awomi Umthombho i-Feeding Scheme ijolise ekunikeni ukutya okunesondlo kubantu abasweleyo e-Mandela Park, eKhayelitsha.",
+    "cta": "Yibandakanye"
+  },
+  "mission": {
+    "title": "Umsebenzi wethu",
+    "intro": "I-AWOMI UMTHOMBO i-Feeding Scheme yi-non-profit organisation eKapa, eKhayelitsha ekwaxhama ukulwa nesidlo sungasoki. Le organisation iqhuba inkqubo yokunikela ukutya imihla ngemihla kubantu abasweleyo.",
+    "funding": "Le projekthi ifuna inkxaso-mali, ubuhlobo, kunye neminikelo ukuze iqhubeke kwaye iphuhlise impembelelo yayo.",
+    "problemTitle": "Ingxaki",
+    "problem": "Ukuswela ukutya kuses saleni eMzantsi Afrika. Amakhaya amanengi eKapa ajongene nokuswela kwemisebenzi nentswela-ntle, nto leyo ibangela ukuba abantwana bahambe besixaxa begqibe kwaye amakhaya angekho nakwizinto ezisisiseko zokutya.",
+    "solution": "I-Feeding scheme ijolise ekunciphiseni indlala ngelixa iphucula impilo, isidlo, kunye nokuzinza kwezentlalo.",
+    "downloadBusinessProfile": "Khuphela iprofayili yezoshishino"
+  },
+  "services": {
+    "title": "Senza ntoni",
+    "dailyMeals": {
+      "title": "Ukutya kwemihla ngemihla",
+      "desc": "Ukunikela amakhulu eekalori zokutya ezinesondlo ngemihla kubantu basecweni abasweleyo."
+    },
+    "children": {
+      "title": "Inkqubo yabantwana",
+      "desc": "Kuqinisekiswa ukuba abantwana bafumana isondlo esifanelekileyo ukuze bakhule begqibe."
+    },
+    "elderly": {
+      "title": "Inkxaso kwabathuthukileyo",
+      "desc": "Ukuhambisa ukutya kwabo bangabathuthukileyo abanokungabinangxaki yokufumana ukutya."
+    }
+  },
+  "governance": {
+    "title": "Isakhiwo soLawulo",
+    "chairperson": "USihlalo",
+    "treasurer": "UMphathi-mali",
+    "secretary": "uMlandu",
+    "operations": "UMphathi wemisebenzi",
+    "volunteer": "Umongameli wabavolontiya"
+  },
+  "biography": {
+    "title": "Umfundisi wethu",
+    "founder": "UGeoffrey Masixole Ralarala",
+    "role": "Umfundisi & uMphathi",
+    "story": "I-Awomi Umthombho yasekwa ngengcamu elula: ukuba wonke umntu unelungelo lokufumana ukutya okunesondlo. Oku kuqala njengenyathelo elincinci lokunikela ukutya kubamelwana abambalwa kuye kwaba sisikhwama sentlalo esikhonzela amakhulu eekalori zokutya yonke imihla.",
+    "community": "Umfundisi wethu, ongqwabalala kuluntu lwaseMandela Park, waqonda ukuba indlala yayinguengxaki yomntu ngamnye kungenanto ingxaki yentlalo eyayidinga inyathelo leentlalo. Ngokuzimisela, inhlekelele, nokungahambi phambili, i-Feeding scheme ibe sisibane sethemba kumakhaya amanengi.",
+    "continuation": "Siquka ukuwandisa isigxina sikawonke-wonke ngelixa sishiya umsebenzi osisiseko: ukondla imizwa, ukusisa iwundla, nokwakha uluntu olunamandla noluqine."
+  },
+  "contact": {
+    "title": "Xhumana nathi",
+    "form": {
+      "name": "Igama",
+      "email": "I-imeyile",
+      "message": "Umyalezo",
+      "submit": "Thumela umyalezo",
+      "success": "Enkosi! I-imeyile yakho kufuneka ivule ukuze ithumele umyalezo."
+    },
+    "info": {
+      "title": "Xhumana nathi",
+      "address": "22 035 Lambede Crescent\nMandela Park\nKhayelitsha 7784",
+      "location": "Indalo yethu"
+    }
+  },
+  "journal": {
+    "title": "Ijenali",
+    "empty": "Akukho mabali ejenali ngoku."
+  },
+  "footer": {
+    "brand": "Ukuxhoma uluntu lwethu ngokutya, imfundo, kunye nokukhula okuhlala.",
+    "copyright": "Onke amagunya agcinwe.",
+    "poweredBy": "Amandla ngokuzimisela ngu"
+  }
+}

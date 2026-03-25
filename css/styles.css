@@ -131,6 +131,35 @@ a {
     transition: 0.3s ease;
 }
 
+.lang-toggle {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+    margin-left: 1rem;
+    transition: background 0.3s ease;
+}
+
+.lang-toggle:hover {
+    background: var(--accent);
+}
+
+.lang-toggle .lang-xh {
+    display: none;
+}
+
+.lang-toggle.xh .lang-en {
+    display: none;
+}
+
+.lang-toggle.xh .lang-xh {
+    display: inline;
+}
+
 main {
     flex: 1;
     margin-top: 70px;

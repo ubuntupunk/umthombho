@@ -3,6 +3,13 @@
     const navToggle = document.querySelector('.nav-toggle');
     const nav = document.querySelector('.nav');
 
+    function t(key) {
+        if (window.i18n && window.i18n.t) {
+            return window.i18n.t(key);
+        }
+        return key;
+    }
+
     navToggle.addEventListener('click', () => {
         nav.classList.toggle('open');
     });
@@ -44,14 +51,14 @@
         return `
             <div class="hero" style="background-image: url('images/photo1.webp')">
                 <div class="hero-content">
-                    <h1>Nourishing Lives, Building Community</h1>
-                    <p>Awomi Umthombho Feeding Scheme is dedicated to providing nutritious meals to those in need in Mandela Park, Khayelitsha.</p>
-                    <a href="/contact" class="btn">Get Involved</a>
+                    <h1>${t('hero.title')}</h1>
+                    <p>${t('hero.subtitle')}</p>
+                    <a href="/contact" class="btn">${t('hero.cta')}</a>
                 </div>
             </div>
             <section class="section">
                 <div class="container">
-                    <h2 class="section-title">Our Mission</h2>
+                    <h2 class="section-title">${t('mission.title')}</h2>
                     <div class="mission">
                         <p>To combat hunger and malnutrition in our community by providing balanced, nutritious meals to children, families, and elderly residents. We believe that no one should go to bed hungry, and that good nutrition is the foundation for a healthy, productive life.</p>
                     </div>
@@ -59,22 +66,22 @@
             </section>
             <section class="section section-alt">
                 <div class="container">
-                    <h2 class="section-title">What We Do</h2>
+                    <h2 class="section-title">${t('services.title')}</h2>
                     <div class="services-grid">
                         <div class="service-card">
                             <img src="images/meal.webp" alt="Daily Meals" style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%; margin-bottom: 1rem;">
-                            <h3>Daily Meals</h3>
-                            <p>Providing hundreds of nutritious meals daily to community members in need.</p>
+                            <h3>${t('services.dailyMeals.title')}</h3>
+                            <p>${t('services.dailyMeals.desc')}</p>
                         </div>
                         <div class="service-card">
                             <img src="images/child.webp" alt="Children" style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%; margin-bottom: 1rem;">
-                            <h3>Children's Program</h3>
-                            <p>Ensuring children receive proper nutrition for healthy growth and development.</p>
+                            <h3>${t('services.children.title')}</h3>
+                            <p>${t('services.children.desc')}</p>
                         </div>
                         <div class="service-card">
                             <img src="images/elder.webp" alt="Elderly" style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%; margin-bottom: 1rem;">
-                            <h3>Elderly Support</h3>
-                            <p>Delivering meals to elderly residents who may have limited access to food.</p>
+                            <h3>${t('services.elderly.title')}</h3>
+                            <p>${t('services.elderly.desc')}</p>
                         </div>
                     </div>
                 </div>
@@ -90,17 +97,17 @@
                         <div style="text-align: center; margin-bottom: 2rem;">
                             <img src="images/logo.webp" alt="Awomi Umthombho" style="max-width: 200px; height: auto;">
                         </div>
-                        <h2 class="section-title">Our Mission</h2>
+                        <h2 class="section-title">${t('mission.title')}</h2>
                         <div class="mission-content" style="max-width: 800px; margin: 0 auto;">
-                            <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">AWOMI UMTHOMBO Feeding Scheme is a Cape Town, Khayelitsha-based non-profit organisation established to combat food insecurity. The organisation operates a community feeding program providing daily meals to vulnerable individuals.</p>
-                            <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">The project seeks funding, partnerships, and donations to sustain operations and expand its impact.</p>
+                            <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">${t('mission.intro')}</p>
+                            <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">${t('mission.funding')}</p>
                             
-                            <h3 style="color: var(--primary); margin: 2rem 0 1rem;">Problem Statement</h3>
-                            <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">Food insecurity remains a critical issue in South Africa. Many households in Cape Town struggle with unemployment and poverty, resulting in children going to school hungry and families lacking access to basic nutrition.</p>
-                            <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">The feeding scheme aims to alleviate hunger while improving health, dignity, and social stability.</p>
+                            <h3 style="color: var(--primary); margin: 2rem 0 1rem;">${t('mission.problemTitle')}</h3>
+                            <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">${t('mission.problem')}</p>
+                            <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">${t('mission.solution')}</p>
                             
                             <div style="margin-top: 2rem; padding: 1.5rem; background: white; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                                <p style="font-weight: 600; margin-bottom: 0.5rem;">Download our business profile</p>
+                                <p style="font-weight: 600; margin-bottom: 0.5rem;">${t('mission.downloadBusinessProfile')}</p>
                                 <a href="docs/Awomi Umthombho Feeding Scheme business profle.docx" class="btn" download>Download Doc</a>
                             </div>
                         </div>
@@ -118,26 +125,26 @@
                         <div style="text-align: center; margin-bottom: 2rem;">
                             <img src="images/logo.webp" alt="Awomi Umthombho" style="max-width: 200px; height: auto;">
                         </div>
-                        <h2 class="section-title">Governance Structure</h2>
+                        <h2 class="section-title">${t('governance.title')}</h2>
                         <div class="governance-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; max-width: 800px; margin: 0 auto;">
                             <div class="governance-card" style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 35px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)'">
-                                <h3 style="color: var(--primary); font-size: 1.25rem;">Chairperson</h3>
+                                <h3 style="color: var(--primary); font-size: 1.25rem;">${t('governance.chairperson')}</h3>
                                 <p style="font-size: 1.1rem; font-weight: 600; margin-top: 0.5rem;">Geoffrey Masixole Ralarala</p>
                             </div>
                             <div class="governance-card" style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 35px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)'">
-                                <h3 style="color: var(--primary); font-size: 1.25rem;">Treasurer</h3>
+                                <h3 style="color: var(--primary); font-size: 1.25rem;">${t('governance.treasurer')}</h3>
                                 <p style="font-size: 1.1rem; font-weight: 600; margin-top: 0.5rem;">Mzwamadoda Mlando</p>
                             </div>
                             <div class="governance-card" style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 35px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)'">
-                                <h3 style="color: var(--primary); font-size: 1.25rem;">Secretary</h3>
+                                <h3 style="color: var(--primary); font-size: 1.25rem;">${t('governance.secretary')}</h3>
                                 <p style="font-size: 1.1rem; font-weight: 600; margin-top: 0.5rem;">Kenneth Ngece</p>
                             </div>
                             <div class="governance-card" style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 35px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)'">
-                                <h3 style="color: var(--primary); font-size: 1.25rem;">Operations Manager</h3>
+                                <h3 style="color: var(--primary); font-size: 1.25rem;">${t('governance.operations')}</h3>
                                 <p style="font-size: 1.1rem; font-weight: 600; margin-top: 0.5rem;">Lolly</p>
                             </div>
                             <div class="governance-card" style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 35px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)'">
-                                <h3 style="color: var(--primary); font-size: 1.25rem;">Volunteer Coordinator</h3>
+                                <h3 style="color: var(--primary); font-size: 1.25rem;">${t('governance.volunteer')}</h3>
                                 <p style="font-size: 1.1rem; font-weight: 600; margin-top: 0.5rem;">Thanda</p>
                             </div>
                         </div>
@@ -157,12 +164,12 @@
                                 <img src="images/photo2.webp" alt="Founder of Awomi Umthombho">
                             </div>
                             <div class="bio-text">
-                                <h2>Our Founder</h2>
-                                <h3 style="color: var(--accent); margin-bottom: 1rem;">Geoffrey Masixole Ralarala</h3>
-                                <p>Founder & Director</p>
-                                <p style="margin-top: 1.5rem;">Awomi Umthombho was founded with a simple belief: that every person deserves access to nutritious food. What started as a small initiative to feed a handful of neighbors has grown into a community pillar serving hundreds of meals each day.</p>
-                                <p>Our founder, deeply rooted in the Mandela Park community, recognized that hunger was not just an individual problem but a community challenge that required collective action. Through dedication, compassion, and unwavering commitment, the feeding scheme has become a beacon of hope for many families.</p>
-                                <p>We continue to expand our reach while maintaining our core mission: nourishing bodies, feeding souls, and building a stronger, more resilient community.</p>
+                                <h2>${t('biography.title')}</h2>
+                                <h3 style="color: var(--accent); margin-bottom: 1rem;">${t('biography.founder')}</h3>
+                                <p>${t('biography.role')}</p>
+                                <p style="margin-top: 1.5rem;">${t('biography.story')}</p>
+                                <p>${t('biography.community')}</p>
+                                <p>${t('biography.continuation')}</p>
                             </div>
                         </div>
                     </div>
@@ -179,37 +186,37 @@
                         <div style="text-align: center; margin-bottom: 2rem;">
                             <img src="images/logo.webp" alt="Awomi Umthombho" style="max-width: 200px; height: auto;">
                         </div>
-                        <h2 class="section-title">Contact Us</h2>
+                        <h2 class="section-title">${t('contact.title')}</h2>
                         <div class="contact-grid">
                             <div class="contact-form">
-                                <div class="form-success" id="formSuccess">Thank you! Your email client should open to send the message.</div>
+                                <div class="form-success" id="formSuccess">${t('contact.form.success')}</div>
                                 <form id="contactForm" action="mailto:masxoleralarala@gmail.com" method="post" enctype="text/plain">
                                     <div class="form-group">
-                                        <label for="name">Name</label>
+                                        <label for="name">${t('contact.form.name')}</label>
                                         <input type="text" id="name" name="name" required>
                                         <span class="error">Please enter your name</span>
                                     </div>
                                     <div class="form-group">
-                                        <label for="email">Email</label>
+                                        <label for="email">${t('contact.form.email')}</label>
                                         <input type="email" id="email" name="email" required>
                                         <span class="error">Please enter a valid email</span>
                                     </div>
                                     <div class="form-group">
-                                        <label for="message">Message</label>
+                                        <label for="message">${t('contact.form.message')}</label>
                                         <textarea id="message" name="message" required></textarea>
                                         <span class="error">Please enter your message</span>
                                     </div>
-                                    <button type="submit" class="btn">Send Message</button>
+                                    <button type="submit" class="btn">${t('contact.form.submit')}</button>
                                 </form>
                             </div>
                             <div class="contact-info">
                                 <div class="info-card">
-                                    <h3>Contact Us</h3>
-                                    <p>22 035 Lambede Crescent<br>Mandela Park<br>Khayelitsha 7784</p>
+                                    <h3>${t('contact.info.title')}</h3>
+                                    <p>${t('contact.info.address').replace('\n', '<br>')}</p>
                                     <p style="margin-top: 1rem;"><a href="mailto:masxoleralarala@gmail.com">masxoleralarala@gmail.com</a></p>
                                 </div>
                                 <div class="info-card">
-                                    <h3>Our Location</h3>
+                                    <h3>${t('contact.info.location')}</h3>
                                     <div class="map-container">
                                         <iframe 
                                             src="https://www.openstreetmap.org/export/embed.html?bbox=18.63%2C-34.05%2C18.65%2C-34.03&amp;layer=mapnik&amp;marker=-34.046%2C18.641"
@@ -316,6 +323,7 @@
         
         const basePath = param ? path.substring(0, path.length - param.length) : path;
         updateNav(basePath);
+        updateStaticTranslations();
         
         if (basePath === '/contact') {
             initContactForm();
@@ -324,11 +332,28 @@
         window.scrollTo(0, 0);
     }
 
+    function updateStaticTranslations() {
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            el.textContent = t(key);
+        });
+        
+        const langBtn = document.getElementById('lang-toggle');
+        if (langBtn) {
+            const savedLang = localStorage.getItem('language') || 'en';
+            langBtn.classList.toggle('xh', savedLang === 'xh');
+        }
+    }
+
     function updateNav(path) {
         document.querySelectorAll('.nav a').forEach(link => {
             link.classList.remove('active');
             if (link.getAttribute('href') === path) {
                 link.classList.add('active');
+            }
+            const i18nKey = link.getAttribute('data-i18n');
+            if (i18nKey) {
+                link.textContent = t(i18nKey);
             }
         });
     }

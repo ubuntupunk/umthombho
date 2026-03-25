@@ -1,0 +1,79 @@
+{
+  "nav": {
+    "home": "Home",
+    "mission": "Mission",
+    "governance": "Governance",
+    "biography": "Biography",
+    "journal": "Journal",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Nourishing Lives, Building Community",
+    "subtitle": "Awomi Umthombho Feeding Scheme is dedicated to providing nutritious meals to those in need in Mandela Park, Khayelitsha.",
+    "cta": "Get Involved"
+  },
+  "mission": {
+    "title": "Our Mission",
+    "intro": "AWOMI UMTHOMBO Feeding Scheme is a Cape Town, Khayelitsha-based non-profit organisation established to combat food insecurity. The organisation operates a community feeding program providing daily meals to vulnerable individuals.",
+    "funding": "The project seeks funding, partnerships, and donations to sustain operations and expand its impact.",
+    "problemTitle": "Problem Statement",
+    "problem": "Food insecurity remains a critical issue in South Africa. Many households in Cape Town struggle with unemployment and poverty, resulting in children going to school hungry and families lacking access to basic nutrition.",
+    "solution": "The feeding scheme aims to alleviate hunger while improving health, dignity, and social stability.",
+    "downloadBusinessProfile": "Download our business profile"
+  },
+  "services": {
+    "title": "What We Do",
+    "dailyMeals": {
+      "title": "Daily Meals",
+      "desc": "Providing hundreds of nutritious meals daily to community members in need."
+    },
+    "children": {
+      "title": "Children's Program",
+      "desc": "Ensuring children receive proper nutrition for healthy growth and development."
+    },
+    "elderly": {
+      "title": "Elderly Support",
+      "desc": "Delivering meals to elderly residents who may have limited access to food."
+    }
+  },
+  "governance": {
+    "title": "Governance Structure",
+    "chairperson": "Chairperson",
+    "treasurer": "Treasurer",
+    "secretary": "Secretary",
+    "operations": "Operations Manager",
+    "volunteer": "Volunteer Coordinator"
+  },
+  "biography": {
+    "title": "Our Founder",
+    "founder": "Geoffrey Masixole Ralarala",
+    "role": "Founder & Director",
+    "story": "Awomi Umthombho was founded with a simple belief: that every person deserves access to nutritious food. What started as a small initiative to feed a handful of neighbors has grown into a community pillar serving hundreds of meals each day.",
+    "community": "Our founder, deeply rooted in the Mandela Park community, recognized that hunger was not just an individual problem but a community challenge that required collective action. Through dedication, compassion, and unwavering commitment, the feeding scheme has become a beacon of hope for many families.",
+    "continuation": "We continue to expand our reach while maintaining our core mission: nourishing bodies, feeding souls, and building a stronger, more resilient community."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Send Message",
+      "success": "Thank you! Your email client should open to send the message."
+    },
+    "info": {
+      "title": "Contact Us",
+      "address": "22 035 Lambede Crescent\nMandela Park\nKhayelitsha 7784",
+      "location": "Our Location"
+    }
+  },
+  "journal": {
+    "title": "Journal",
+    "empty": "No journal entries yet."
+  },
+  "footer": {
+    "brand": "Empowering our community through nutrition, education, and sustainable growth.",
+    "copyright": "All rights reserved.",
+    "poweredBy": "Proudly powered by"
+  }
+}

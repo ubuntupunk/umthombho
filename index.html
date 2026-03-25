@@ -22,12 +22,16 @@
                 <span></span>
             </button>
             <nav class="nav">
-                <a href="/">Home</a>
-                <a href="/mission">Mission</a>
-                <a href="/governance">Governance</a>
-                <a href="/biography">Biography</a>
-                <a href="/journal">Journal</a>
-                <a href="/contact">Contact</a>
+                <a href="/" data-i18n="nav.home">Home</a>
+                <a href="/mission" data-i18n="nav.mission">Mission</a>
+                <a href="/governance" data-i18n="nav.governance">Governance</a>
+                <a href="/biography" data-i18n="nav.biography">Biography</a>
+                <a href="/journal" data-i18n="nav.journal">Journal</a>
+                <a href="/contact" data-i18n="nav.contact">Contact</a>
+                <button id="lang-toggle" class="lang-toggle" aria-label="Toggle language">
+                    <span class="lang-en">EN</span>
+                    <span class="lang-xh">XH</span>
+                </button>
             </nav>
         </div>
     </header>
@@ -38,19 +42,19 @@
         <div class="container footer-inner">
             <div class="footer-brand">
                 <h3>Awomi Umthombho</h3>
-                <p>Empowering our community through nutrition, education, and sustainable growth.</p>
+                <p data-i18n="footer.brand">Empowering our community through nutrition, education, and sustainable growth.</p>
             </div>
             <div class="footer-links">
                 <h4>Quick Links</h4>
-                <a href="/">Home</a>
-                <a href="/mission">Mission</a>
-                <a href="/governance">Governance</a>
-                <a href="/biography">Biography</a>
-                <a href="/journal">Journal</a>
-                <a href="/contact">Contact</a>
+                <a href="/" data-i18n="nav.home">Home</a>
+                <a href="/mission" data-i18n="nav.mission">Mission</a>
+                <a href="/governance" data-i18n="nav.governance">Governance</a>
+                <a href="/biography" data-i18n="nav.biography">Biography</a>
+                <a href="/journal" data-i18n="nav.journal">Journal</a>
+                <a href="/contact" data-i18n="nav.contact">Contact</a>
             </div>
             <div class="footer-contact">
-                <h4>Contact</h4>
+                <h4 data-i18n="nav.contact">Contact</h4>
                 <p>22 035 Lambede Crescent<br>Mandela Park, Khayelitsha 7784</p>
                 <p><a href="mailto:masxoleralarala@gmail.com">masxoleralarala@gmail.com</a></p>
             </div>
@@ -61,6 +65,8 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
+    <script src="js/i18n.js"></script>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script>
         if (window.location.hash.startsWith('#invite_token=')) {
