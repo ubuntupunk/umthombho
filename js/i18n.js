@@ -2,46 +2,61 @@
     const savedLang = localStorage.getItem('language') || 'en';
     
     async function loadTranslations() {
-        const [enRes, xhRes] = await Promise.all([
-            fetch('/locales/en.json'),
-            fetch('/locales/xh.json')
-        ]);
-        
-        const en = await enRes.json();
-        const xh = await xhRes.json();
-        
-        i18next.init({
-            lng: savedLang,
-            fallbackLng: 'en',
-            resources: {
-                en: { translation: en },
-                xh: { translation: xh }
-            }
-        });
-        
-        updateUI();
-        setupToggle();
+        try {
+            const [enRes, xhRes] = await Promise.all([
+                fetch('/locales/en.json'),
+                fetch('/locales/xh.json')
+            ]);
+            
+            const en = await enRes.json();
+            const xh = await xhRes.json();
+            
+            i18next.init({
+                lng: savedLang,
+                fallbackLng: 'en',
+                resources: {
+                    en: { translation: en },
+                    xh: { translation: xh }
+                }
+            }, () => {
+                updateUI();
+                setupToggle();
+            });
+        } catch (err) {
+            console.error('Failed to load translations:', err);
+        }
     }
     
     function t(key) {
-        return i18next.t(key);
+        if (i18next && i18next.isInitialized) {
+            return i18next.t(key);
+        }
+        return key;
     }
     
     function updateUI() {
-        const lang = i18next.language;
-        document.getElementById('lang-toggle').classList.toggle('xh', lang === 'xh');
+        const lang = i18next?.language || savedLang;
+        const btn = document.getElementById('lang-toggle');
+        if (btn) {
+            btn.classList.toggle('xh', lang === 'xh');
+        }
         document.documentElement.lang = lang;
         
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
-            el.textContent = t(key);
+            if (key) {
+                el.textContent = t(key);
+            }
         });
     }
     
     function setupToggle() {
         const btn = document.getElementById('lang-toggle');
+        if (!btn) return;
+        
         btn.addEventListener('click', () => {
-            const newLang = i18next.language === 'en' ? 'xh' : 'en';
+            const currentLang = i18next?.language || savedLang;
+            const newLang = currentLang === 'en' ? 'xh' : 'en';
             i18next.changeLanguage(newLang);
             localStorage.setItem('language', newLang);
             updateUI();
@@ -49,10 +64,17 @@
         });
     }
     
+    function init() {
+        loadTranslations().then(() => {
+            setupToggle();
+            updateUI();
+        });
+    }
+    
     if (typeof i18next !== 'undefined') {
-        loadTranslations();
+        init();
     } else {
-        window.addEventListener('load', loadTranslations);
+        window.addEventListener('load', init);
     }
     
     window.i18n = {
