@@ -41,9 +41,14 @@
         const lang = i18next?.language || savedLang;
         console.log('updateUI, lang:', lang);
         const btn = document.getElementById('lang-toggle');
-        console.log('lang-toggle found:', !!btn);
+        console.log('lang-toggle found:', !!btn, 'has xh class:', btn?.classList.contains('xh'));
         if (btn) {
-            btn.classList.toggle('xh', lang === 'xh');
+            if (lang === 'xh') {
+                btn.classList.add('xh');
+            } else {
+                btn.classList.remove('xh');
+            }
+            console.log('After toggle, btn classList:', btn.classList);
         }
         document.documentElement.lang = lang;
         
@@ -62,7 +67,7 @@
             return;
         }
         
-        btn.addEventListener('click', () => {
+        btn.onclick = function() {
             const currentLang = i18next?.language || savedLang;
             const newLang = currentLang === 'en' ? 'xh' : 'en';
             console.log('Toggle clicked, switching from', currentLang, 'to', newLang);
@@ -70,7 +75,7 @@
             localStorage.setItem('language', newLang);
             updateUI();
             window.location.reload();
-        });
+        };
     }
     
     function init() {
