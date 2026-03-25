@@ -8,11 +8,12 @@
     "dev": "node scripts/build-journal.js && echo 'Static site - no dev server needed'"
   },
   "dependencies": {
-    "@netlify/identity": "^1.0.0"
+    "@netlify/identity": "^1.0.0",
+    "i18next": "^25.10.9"
   },
   "devDependencies": {
+    "glob": "^10.3.10",
     "gray-matter": "^4.0.3",
-    "markdown-it": "^14.0.0",
-    "glob": "^10.3.10"
+    "markdown-it": "^14.0.0"
   }
 }
