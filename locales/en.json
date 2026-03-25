@@ -20,7 +20,8 @@
     "problemTitle": "Problem Statement",
     "problem": "Food insecurity remains a critical issue in South Africa. Many households in Cape Town struggle with unemployment and poverty, resulting in children going to school hungry and families lacking access to basic nutrition.",
     "solution": "The feeding scheme aims to alleviate hunger while improving health, dignity, and social stability.",
-    "downloadBusinessProfile": "Download our business profile"
+    "downloadBusinessProfile": "Download our business profile",
+    "downloadButton": "Download Doc"
   },
   "services": {
     "title": "What We Do",

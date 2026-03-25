@@ -122,7 +122,7 @@
                             
                             <div style="margin-top: 2rem; padding: 1.5rem; background: white; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
                                 <p style="font-weight: 600; margin-bottom: 0.5rem;">${t('mission.downloadBusinessProfile')}</p>
-                                <a href="docs/Awomi Umthombho Feeding Scheme business profle.docx" class="btn" download>Download Doc</a>
+                                <a href="docs/Awomi Umthombho Feeding Scheme business profle.docx" class="btn" download>${t('mission.downloadButton')}</a>
                             </div>
                         </div>
                     </div>
