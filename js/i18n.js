@@ -1,6 +1,5 @@
 (function() {
     const savedLang = localStorage.getItem('language') || 'en';
-    console.log('i18n init, savedLang:', savedLang);
     
     async function loadTranslations() {
         try {
@@ -11,7 +10,6 @@
             
             const en = await enRes.json();
             const xh = await xhRes.json();
-            console.log('Loaded translations, en keys:', Object.keys(en).slice(0, 5));
             
             i18next.init({
                 lng: savedLang,
@@ -21,7 +19,6 @@
                     xh: { translation: xh }
                 }
             }, () => {
-                console.log('i18next initialized, language:', i18next.language);
                 updateUI();
                 setupToggle();
             });
@@ -39,16 +36,13 @@
     
     function updateUI() {
         const lang = i18next?.language || savedLang;
-        console.log('updateUI, lang:', lang);
         const btn = document.getElementById('lang-toggle');
-        console.log('lang-toggle found:', !!btn, 'has xh class:', btn?.classList.contains('xh'));
         if (btn) {
             if (lang === 'xh') {
                 btn.classList.add('xh');
             } else {
                 btn.classList.remove('xh');
             }
-            console.log('After toggle, btn classList:', btn.classList);
         }
         document.documentElement.lang = lang;
         
@@ -62,15 +56,11 @@
     
     function setupToggle() {
         const btn = document.getElementById('lang-toggle');
-        if (!btn) {
-            console.log('setupToggle: btn not found');
-            return;
-        }
+        if (!btn) return;
         
         btn.onclick = function() {
             const currentLang = i18next?.language || savedLang;
             const newLang = currentLang === 'en' ? 'xh' : 'en';
-            console.log('Toggle clicked, switching from', currentLang, 'to', newLang);
             i18next.changeLanguage(newLang);
             localStorage.setItem('language', newLang);
             updateUI();
@@ -88,7 +78,6 @@
     if (typeof i18next !== 'undefined') {
         init();
     } else {
-        console.log('i18next not defined yet, waiting for load');
         window.addEventListener('load', init);
     }
     
