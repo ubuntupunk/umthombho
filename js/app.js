@@ -4,10 +4,24 @@
     const nav = document.querySelector('.nav');
 
     function t(key) {
+        if (typeof i18next !== 'undefined' && i18next.isInitialized) {
+            return i18next.t(key);
+        }
         if (window.i18n && window.i18n.t) {
             return window.i18n.t(key);
         }
         return key;
+    }
+
+    function waitForI18n(callback) {
+        const check = () => {
+            if (typeof i18next !== 'undefined' && i18next.isInitialized) {
+                callback();
+            } else {
+                setTimeout(check, 50);
+            }
+        };
+        check();
     }
 
     navToggle.addEventListener('click', () => {
@@ -404,5 +418,16 @@
     }
 
     window.addEventListener('popstate', handleRoute);
-    window.addEventListener('load', handleRoute);
+    
+    function init() {
+        waitForI18n(() => {
+            handleRoute();
+        });
+    }
+    
+    if (document.readyState === 'complete') {
+        init();
+    } else {
+        window.addEventListener('load', init);
+    }
 })();
