@@ -1,5 +1,6 @@
 (function() {
     const savedLang = localStorage.getItem('language') || 'en';
+    document.body.classList.add('i18n-loading');
     
     async function loadTranslations() {
         try {
@@ -19,11 +20,14 @@
                     xh: { translation: xh }
                 }
             }, () => {
+                document.body.classList.remove('i18n-loading');
+                document.body.classList.add('i18n-ready');
                 updateUI();
                 setupToggle();
             });
         } catch (err) {
             console.error('Failed to load translations:', err);
+            document.body.classList.remove('i18n-loading');
         }
     }
     
@@ -69,10 +73,7 @@
     }
     
     function init() {
-        loadTranslations().then(() => {
-            setupToggle();
-            updateUI();
-        });
+        loadTranslations();
     }
     
     if (typeof i18next !== 'undefined') {

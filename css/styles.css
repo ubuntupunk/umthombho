@@ -195,6 +195,15 @@ main {
     margin-top: 70px;
 }
 
+body.i18n-loading #app {
+    opacity: 0;
+}
+
+body.i18n-ready #app {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
 .hero {
     position: relative;
     height: 80vh;
