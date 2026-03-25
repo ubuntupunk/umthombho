@@ -63,7 +63,7 @@
 
     function renderHome() {
         return `
-            <div class="hero" style="background-image: url('images/photo1.webp')">
+            <div class="hero" style="background-image: url('images/photo1.webp'); background-color: var(--primary);">
                 <div class="hero-content">
                     <h1>${t('hero.title')}</h1>
                     <p>${t('hero.subtitle')}</p>
@@ -175,7 +175,7 @@
                     <div class="container">
                         <div class="bio-content">
                             <div class="bio-image">
-                                <img src="images/photo2.webp" alt="Founder of Awomi Umthombho">
+                                <img src="images/photo2.webp" alt="Founder of Awomi Umthombho" loading="lazy" width="400" height="500" style="background: var(--secondary);">
                             </div>
                             <div class="bio-text">
                                 <h2>${t('biography.title')}</h2>
