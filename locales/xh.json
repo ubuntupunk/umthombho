@@ -10,7 +10,8 @@
   "hero": {
     "title": "Ukondla iMoya, ukwakha iCommunity",
     "subtitle": "I-Awomi Umthombho i-Feeding Scheme ijolise ekunikeni ukutya okunesondlo kubantu abasweleyo e-Mandela Park, eKhayelitsha.",
-    "cta": "Yibandakanye"
+    "cta": "Yibandakanye",
+    "missionText": "Ukulwa indlala nokungalungi kwentlalo kuluntu lwethu ngokunikela ukutya okulungeleleneyo okunesondlo kubantwana, amakhaya, nabakulu. Sikholwa ukuba akukho mntu ongaya labo elele encama, kwaye ukutya okulungileyo sisiseko semfundo ephilileyo nemveliso."
   },
   "mission": {
     "title": "Umsebenzi wethu",

@@ -74,7 +74,7 @@
                 <div class="container">
                     <h2 class="section-title">${t('mission.title')}</h2>
                     <div class="mission">
-                        <p>To combat hunger and malnutrition in our community by providing balanced, nutritious meals to children, families, and elderly residents. We believe that no one should go to bed hungry, and that good nutrition is the foundation for a healthy, productive life.</p>
+                        <p>${t('hero.missionText')}</p>
                     </div>
                 </div>
             </section>
