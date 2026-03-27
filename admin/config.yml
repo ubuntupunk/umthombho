@@ -39,7 +39,7 @@ collections:
     folder: "content/journal"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    i18n: false
+    i18n: true
     fields:
       - {label: "Language", name: "language", widget: "select", options: [{label: "English", value: "en"}, {label: "isiXhosa", value: "xh"}], default: "en"}
       - {label: "Title", name: "title", widget: "string"}
