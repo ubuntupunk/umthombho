@@ -1,5 +1,13 @@
 # Awomi Umthombho Feeding Scheme
 
+
+[![GitHub](https://img.shields.io/badge/GitHub-ubuntupunk/umthombhu-blue)](https://github.com/ubuntupunk/umthombhu)
+[![License](https://img.shields.io/badge/License-GPL-green.svg)](LICENSE)
+
+<a href="https://github.com/pedromxavier/flag-badges">
+    <img src="https://raw.githubusercontent.com/pedromxavier/flag-badges/main/badges/ZA.svg" alt="made in za">
+</a>
+
 A vanilla JavaScript single-page application for a community feeding scheme in Khayelitsha, Cape Town. Built with Decap CMS for content management.
 
 ## Features
